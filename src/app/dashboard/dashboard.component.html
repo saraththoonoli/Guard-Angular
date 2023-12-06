@@ -1,0 +1,14 @@
+<h2>Dashboard</h2>
+    <div *ngIf="isAdmin; else userDashboard">
+      <p><b>Welcome, <span>Admin!</span></b></p>
+
+      <p>Usually, a dashboard is intended to convey different, but related information in an easy-to-digest form. And oftentimes, this includes things like key performance indicators (KPI)s or other important business metrics that stakeholders need to see and understand at a glance.</p>
+      
+    </div>
+    <ng-template #userDashboard>
+      <p><b>Welcome,</b> <span><b>User!</b></span> <span> <a class="form" href="form">Click fill form</a></span> </p>
+     
+    </ng-template>
+    <div (click)="logout()" class="btns"><a class="btn btn-primary" type="button" href='login'>Logout</a></div>
+   
+    
